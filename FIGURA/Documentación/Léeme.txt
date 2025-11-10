@@ -2,29 +2,33 @@
 ======================================================
 
 📂 ESTRUCTURA DEL PROYECTO:
+
 FIGURAS/
-├── include/                 		-> Archivos de cabecera (.hpp)
-│   ├── Figura.hpp           		-> Clase abstracta base
-│   ├── Circulo.hpp         		-> Clase para círculos
-│   ├── Rectangulo.hpp      		-> Clase para rectángulos
-│   ├── Triangulo.hpp       		-> Clase para triángulos
-│   ├── GestorFiguras.hpp   		-> Gestor de figuras
-│   └── Menu.hpp            		-> Interfaz de usuario
-├── src/                    		-> Código fuente (.cpp)
-│   ├── Figura.cpp          		-> Implementación base
-│   ├── Circulo.cpp         		-> Implementación círculos
-│   ├── Rectangulo.cpp      		-> Implementación rectángulos
-│   ├── Triangulo.cpp       		-> Implementación triángulos
-│   ├── GestorFiguras.cpp   		-> Implementación gestor
-│   ├── Menu.cpp            		-> Implementación menús
-│   └── Main.cpp            		-> Punto de entrada
-├── bin/                    		-> Ejecutable
-│   └── Figuras.exe         		-> Programa compilado
-├── Diagramas/              		-> Diagramas de diseño
-│   ├── DiagramaReferencia.drawio  	-> Diagrama general
-│   └── DiagramaDetallado.drawio   	-> Diagrama detallado
-└── Documentación/          		-> Esta documentación
-    └── Léeme.txt           		-> Este archivo
+📁
+├── 📁 include/                 		 ARCHIVOS DE CABECERA (.HPP)
+│   ├── 📄 Figura.hpp           		 Clase abstracta base.
+│   ├── 📄 Circulo.hpp         		 Clase para círculos.
+│   ├── 📄 Rectangulo.hpp      		 Clase para rectángulos.
+│   ├── 📄 Triangulo.hpp       		 Clase para triángulos.
+│   ├── 📄 GestorFiguras.hpp   		 Gestor de figuras.
+│   └── 📄 Menu.hpp            		 Interfaz de usuario.
+├── 📁 src/                    		 CÓDIGO FUENTE (.CPP)
+│   ├── 📄 Figura.cpp          		 Implementación base.
+│   ├── 📄 Circulo.cpp         		 Implementación círculos.
+│   ├── 📄 Rectangulo.cpp      		 Implementación rectángulos.
+│   ├── 📄 Triangulo.cpp       		 Implementación triángulos.
+│   ├── 📄 GestorFiguras.cpp   		 Implementación gestor.
+│   ├── 📄 Menu.cpp            		 Implementación menús.
+│   └── 📄 Main.cpp            		 Punto de entrada.
+├── 📁 bin/                    		 EJECUTABLE
+│   └── 🚀 Figuras.exe         		 Programa compilado.
+├── 📁 Diagramas/              		 DIAGRAMAS DE DISEÑO
+│   ├── 📊 DiagramaReferencia.drawio  	 	 Diagrama general.
+│   └── 📊 DiagramaDetallado.drawio   		 Diagrama detallado.
+└── 📁 Documentación/          		 DOCUMENTACIÓN
+    └── 📄 Léeme.txt           		 Instrucciones de uso y compilación.
+
+
 
 🚀 CÓMO COMPILAR Y EJECUTAR:
 ----------------------------
@@ -43,10 +47,12 @@ FIGURAS/
    O directamente desde FIGURAS:
    bin\Figuras.exe
 
+
 🎮 CÓMO USAR EL PROGRAMA:
 -------------------------
 
 Al ejecutar el programa verás un menú principal con 6 opciones:
+
 
 📋 MENÚ PRINCIPAL
 =================
@@ -57,8 +63,9 @@ Al ejecutar el programa verás un menú principal con 6 opciones:
 5. 🚀 Mover todas las figuras.
 6. ❌ Salir del programa.
 
-💡 GUÍA PASO A PASO:
 
+💡 GUÍA PASO A PASO:
+--------------------
 1. ➕ CREAR FIGURAS:
    - Selecciona opción 1
    - Elige el tipo de figura (🔵 Círculo, 🟦 Rectángulo, 🔺 Triángulo)
@@ -96,6 +103,7 @@ Al ejecutar el programa verás un menú principal con 6 opciones:
    - El programa se cierra automáticamente.
    - Libera toda la memoria utilizada.
 
+
 🎯 CARACTERÍSTICAS DEL SISTEMA:
 -------------------------------
 
@@ -119,6 +127,7 @@ Al ejecutar el programa verás un menú principal con 6 opciones:
    - Valores numéricos positivos obligatorios.
    - Solo 3 tipos de figuras disponibles.
 
+
 🔧 INFORMACIÓN TÉCNICA:
 -----------------------
 
@@ -137,6 +146,7 @@ Al ejecutar el programa verás un menú principal con 6 opciones:
    - Destructores virtuales para cleanup seguro.
    - GestorFiguras responsable de crear/destruir figuras.
 
+
 🐛 SOLUCIÓN DE PROBLEMAS:
 -------------------------
 
@@ -152,6 +162,7 @@ Al ejecutar el programa verás un menú principal con 6 opciones:
 ❌ "No puedo crear más de 5 figuras":
    - Es una limitación intencional del diseño.
    - Borra figuras existentes para crear nuevas.
+
 
 📞 SOPORTE:
 -----------
