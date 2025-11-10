@@ -1,0 +1,165 @@
+🎨 SISTEMA DE FIGURAS GEOMÉTRICAS - MANUAL DE USUARIO
+======================================================
+
+📂 ESTRUCTURA DEL PROYECTO:
+FIGURAS/
+├── include/                 		-> Archivos de cabecera (.hpp)
+│   ├── Figura.hpp           		-> Clase abstracta base
+│   ├── Circulo.hpp         		-> Clase para círculos
+│   ├── Rectangulo.hpp      		-> Clase para rectángulos
+│   ├── Triangulo.hpp       		-> Clase para triángulos
+│   ├── GestorFiguras.hpp   		-> Gestor de figuras
+│   └── Menu.hpp            		-> Interfaz de usuario
+├── src/                    		-> Código fuente (.cpp)
+│   ├── Figura.cpp          		-> Implementación base
+│   ├── Circulo.cpp         		-> Implementación círculos
+│   ├── Rectangulo.cpp      		-> Implementación rectángulos
+│   ├── Triangulo.cpp       		-> Implementación triángulos
+│   ├── GestorFiguras.cpp   		-> Implementación gestor
+│   ├── Menu.cpp            		-> Implementación menús
+│   └── Main.cpp            		-> Punto de entrada
+├── bin/                    		-> Ejecutable
+│   └── Figuras.exe         		-> Programa compilado
+├── Diagramas/              		-> Diagramas de diseño
+│   ├── DiagramaReferencia.drawio  	-> Diagrama general
+│   └── DiagramaDetallado.drawio   	-> Diagrama detallado
+└── Documentación/          		-> Esta documentación
+    └── Léeme.txt           		-> Este archivo
+
+🚀 CÓMO COMPILAR Y EJECUTAR:
+----------------------------
+
+1. 📦 COMPILACIÓN (Windows):
+   Abre la terminal en la carpeta FIGURAS y ejecuta:
+   
+   g++ -I include/ src/*.cpp -o bin/Figuras.exe
+
+2. 🎯 EJECUCIÓN:
+   Navega a la carpeta bin y ejecuta:
+   
+   cd bin
+   Figuras.exe
+
+   O directamente desde FIGURAS:
+   bin\Figuras.exe
+
+🎮 CÓMO USAR EL PROGRAMA:
+-------------------------
+
+Al ejecutar el programa verás un menú principal con 6 opciones:
+
+📋 MENÚ PRINCIPAL
+=================
+1. ➕ Crear nueva figura.
+2. 🎨 Dibujar todas las figuras.
+3. 🧹 Borrar todas las figuras.
+4. 🔄 Rotar todas las figuras.
+5. 🚀 Mover todas las figuras.
+6. ❌ Salir del programa.
+
+💡 GUÍA PASO A PASO:
+
+1. ➕ CREAR FIGURAS:
+   - Selecciona opción 1
+   - Elige el tipo de figura (🔵 Círculo, 🟦 Rectángulo, 🔺 Triángulo)
+   - Ingresa los datos solicitados:
+     * 🔵 Círculo: Radio y posición (X,Y).
+     * 🟦 Rectángulo: Ancho, Alto y posición (X,Y).
+     * 🔺 Triángulo: Base, Altura y posición (X,Y).
+   - Puedes crear hasta 5 figuras.
+
+2. 🎨 DIBUJAR FIGURAS:
+   - Selecciona opción 2.
+   - El programa mostrará TODAS las figuras creadas.
+   - Verás información detallada y representación visual.
+   - Cada figura se dibuja con su forma característica.
+
+3. 🧹 BORRAR FIGURAS:
+   - Selecciona opción 3.
+   - Todas las figuras serán "borradas" (limpiadas de pantalla).
+   - Las figuras siguen almacenadas para otras operaciones.
+
+4. 🔄 ROTAR FIGURAS:
+   - Selecciona opción 4.
+   - Cada figura rota de manera específica:
+     * 🔵 Círculo: Sin cambios (simetría perfecta).
+     * 🟦 Rectángulo: Intercambia ancho y alto.
+     * 🔺 Triángulo: Cambia orientación.
+
+5. 🚀 MOVER FIGURAS:
+   - Selecciona opción 5.
+   - Simula el movimiento de todas las figuras.
+   - Muestra mensajes de desplazamiento.
+
+6. ❌ SALIR:
+   - Selecciona opción 6.
+   - El programa se cierra automáticamente.
+   - Libera toda la memoria utilizada.
+
+🎯 CARACTERÍSTICAS DEL SISTEMA:
+-------------------------------
+
+✅ POLIMORFISMO: 
+   - Mismo comando, diferentes comportamientos.
+   - dibujar() hace algo diferente en cada figura.
+   - rotar() se adapta a cada tipo de figura.
+
+✅ SEGURO Y ROBUSTO:
+   - Validación de entrada de datos.
+   - Manejo de errores elegante.
+   - Sin fugas de memoria.
+
+✅ INTERFAZ AMIGABLE:
+   - Emojis y colores para mejor experiencia.
+   - Menús intuitivos y claros.
+   - Feedback inmediato de todas las acciones.
+
+✅ LÍMITES:
+   - Máximo 5 figuras simultáneas.
+   - Valores numéricos positivos obligatorios.
+   - Solo 3 tipos de figuras disponibles.
+
+🔧 INFORMACIÓN TÉCNICA:
+-----------------------
+
+📐 FIGURAS DISPONIBLES:
+   - 🔵 CÍRCULO: Radio, posición X,Y.
+   - 🟦 RECTÁNGULO: Ancho, Alto, posición X,Y. 
+   - 🔺 TRIÁNGULO: Base, Altura, posición X,Y.
+
+🎭 POLIMORFISMO IMPLEMENTADO:
+   - Clase base abstracta: Figura.
+   - Métodos virtuales puros: dibujar(), borrar(), getTipo()
+   - Métodos con implementación por defecto: rotar(), mover()
+
+💾 GESTIÓN DE MEMORIA:
+   - Array de punteros Figura* para polimorfismo.
+   - Destructores virtuales para cleanup seguro.
+   - GestorFiguras responsable de crear/destruir figuras.
+
+🐛 SOLUCIÓN DE PROBLEMAS:
+-------------------------
+
+❌ "Los emojis no se ven bien":
+   - El programa usa UTF-8, verifica la configuración de tu terminal.
+   - En Windows, ejecuta como: chcp 65001 && bin\Figuras.exe
+
+❌ "Error de compilación":
+   - Verifica que todos los archivos .hpp estén en include/
+   - Verifica que todos los archivos .cpp estén en src/
+   - Usa un compilador que soporte C++11 o superior.
+
+❌ "No puedo crear más de 5 figuras":
+   - Es una limitación intencional del diseño.
+   - Borra figuras existentes para crear nuevas.
+
+📞 SOPORTE:
+-----------
+
+Este programa fue desarrollado como demostración de:
+- Programación Orientada a Objetos.
+- Polimorfismo y Herencia en C++
+- Diseño modular y mantenible.
+- Interfaces de usuario por consola.
+
+¡Disfruta explorando el mundo de las figuras geométricas! 🎨✨
